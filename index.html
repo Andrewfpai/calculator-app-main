@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="theme1/theme1.css">
+  <link rel="stylesheet" href="theme2/theme2.css">
+  <link rel="stylesheet" href="theme3/theme3.css">
+  <link rel="stylesheet" href="switchButton/switch.css">
+
+  
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body onload="onLoad()">
+    <div id="container" class="container1">
+
+      <section id="top" class="top">
+
+        <div class="title" id=""title>calc</div>
+
+        <div class="sideRight">
+          <div class="theme-text">THEME</div>
+
+          <div class="switch-button">
+            <div class="ind">
+              <div class="ind1">1</div>
+              <div class="ind2">2</div>
+              <div class="ind3">3</div>
+            </div>
+
+            <label class="switch">
+              <div class="indicator">
+                <span class="space one" onclick="theme(1)"></span>
+                <span class="space two" onclick="theme(2)"></span>
+                <span class="space three" onclick="theme(3)"></span>
+              </div>
+              <span class="slider round"></span>
+              <span class="main_slider" id="main_slider"></span>
+            </label>
+          </div>
+        </div>
+
+      </section>
+
+
+      <section id="middle" class="middle">
+        <div class="numeric">
+          <div class="display" id="display" >0</div>
+        </div>
+        
+
+      </section>
+
+
+      <section id="bottom" class="bottom">
+        <div class="btn seven" onclick="combine('7')">7</div>
+        <div class="btn eight" onclick="combine('8')">8</div>
+        <div class="btn nine" onclick="combine('9')">9</div>
+        <div class="del" onclick="deleteDislay()">DEL</div>
+
+        <div class="btn four" onclick="combine('4')">4</div>
+        <div class="btn five" onclick="combine('5')">5</div>
+        <div class="btn six" onclick="combine('6')">6</div>
+        <div class="btn addition" onclick="combine('+')">+</div>
+
+        
+        <div class="btn one" onclick="combine('1')">1</div>
+        <div class="btn two" onclick="combine('2')">2</div>
+        <div class="btn three" onclick="combine('3')">3</div>
+        <div class="btn subtraction" onclick="combine('-')">-</div>
+        
+        <div class="btn coma" onclick="combine('.')">.</div>
+        <div class="btn zero" onclick="combine('0')">0</div>
+        <div class="btn division" onclick="combine('/')">/</div>
+        <div class="btn multiplication" onclick="combine('*')">x</div>
+        
+        <div class="reset" style="width: 150px;" onclick="reset()">RESET</div>
+        <div class="equals" style="width: 150px;" onclick="equals()">=</div>
+      </section>
+
+    </div>
+
+
+
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+  <script src="javascript/index.js"></script>
+  <script src="javascript/switch.js"></script>
+</html>
